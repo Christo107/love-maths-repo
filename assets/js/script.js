@@ -36,7 +36,16 @@ function checkAnswer() {
 }
 
 function calculateCorrectAnswer() {
-    
+    let operand1 = parseInt(document.getElementById('operand1').innertext);
+    let operand2 = parseInt(document.getElementById('operand1').innertext);
+    let operator = document.getElementById('operator').innertext;
+
+    if (operator === "+"){
+        return [operand1 +operand2, "addition"];
+    } else {
+        alert(`Unimplemented operator ${operator}`);
+        throw `Unimplemented operator ${operator}. Aborting!`;
+    }
 }
 
 function incrementScore() {
